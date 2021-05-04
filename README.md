@@ -1,5 +1,7 @@
 # Clubhook
 
+npm install禁止
+
 ## Git ブランチルール
 
 `main`
