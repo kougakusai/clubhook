@@ -23,21 +23,23 @@
       "version": "detect"
     }
   },
-  "plugins": ["react-hooks", "react", "@typescript-eslint", "prettier"],
+  "plugins": ["react-hooks", "react", "@typescript-eslint", "tailwindcss"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
+    "plugin:tailwindcss/recommended",
+    "prettier"
   ],
   "rules": {
     "react/prop-types": "off",
     "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/no-custom-classname": "warn",
+    "tailwindcss/no-contradicting-classname": "error"
   },
   "overrides": [
     {
