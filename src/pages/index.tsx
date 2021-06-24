@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="container">
-      <h1 className="p-5 m-3">test</h1>
+      <div className="w-full bg-[#D8DEE9] h-[64px]"></div>
     </div>
   );
 }
