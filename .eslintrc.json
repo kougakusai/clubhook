@@ -34,18 +34,19 @@
     "prettier"
   ],
   "rules": {
+    "arrow-body-style": ["error", "always"],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "tailwindcss/classnames-order": "warn",
     "tailwindcss/no-custom-classname": "warn",
-    "tailwindcss/no-contradicting-classname": "error"
+    "tailwindcss/no-contradicting-classname": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   },
   "overrides": [
     {
-      "files": ["*.js"],
+      "files": ["src/pages/**/*.tsx", "src/pages/api/**/*.ts"],
       "rules": {
-        "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/explicit-function-return-type": "off"
+        "import/no-default-export": "off"
       }
     }
   ]
