@@ -37,7 +37,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'tailwindcss/classnames-order': 'warn',
-    'tailwindcss/no-custom-classname': 'warn',
+    // 'tailwindcss/no-custom-classname': 'warn',
     'tailwindcss/no-contradicting-classname': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
