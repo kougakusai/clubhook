@@ -18,3 +18,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h1 {
+  color: #2e3440; /* night-900 */
+  font-size: 2rem;
+}
+
+hr {
+  border-color: #2e3440; /* night-900 */
+}
