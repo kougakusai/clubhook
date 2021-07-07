@@ -1,15 +1,21 @@
 import { NextPage } from 'next';
+import Layout from 'src/components/shared/Layout';
 
 const Index: NextPage = () => {
   return (
-    <div>
-      <div className="fixed top-0 z-40 w-full h-header bg-snow-900"></div>
-      <div className="md:flex z-30 md:flex-row mt-header">
-        <div className="hidden md:block md:w-[72px] md:h-menu bg-snow-900 "></div>
-        <div className="w-full md:w-[230px] h-[48px] md:h-menu bg-night-900"></div>
-        <div className="w-[100px] h-[50px] bg-gray-100"></div>
-      </div>
-    </div>
+    <>
+      <Layout>
+        <main className="flex-grow">
+          <div className="py-6 md:px-6 lg:px-8 pt-[100px] lg:ml-[400px] lg:w-[500px] max-w-7xl">
+            {/* Replace with your content */}
+            <div className="py-6 px-4 lg:px-0">
+              <div className="h-[1000px] rounded-lg border-4 border-gray-200 border-dashed" />
+            </div>
+            {/* /End replace */}
+          </div>
+        </main>
+      </Layout>
+    </>
   );
 };
 
