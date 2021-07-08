@@ -20,7 +20,14 @@ module.exports = {
         },
       },
       height: {
-        header: "64px",
+        header: '48px',
+        menu: 'calc(100vh - 48px)',
+      },
+      margin: {
+        header: '48px',
+      },
+      padding: {
+        header: '48px',
       },
     },
   },

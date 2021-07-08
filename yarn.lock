@@ -88,6 +88,16 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.2.0.tgz#f3933a44e365864f4dad5db94158106d511e8131"
   integrity sha512-sqKVVVOe5ivCaXDWivIJYVSaEgdQK9ul7a4Kity5Iw7u9+wBAPbX1RMSnLLmp7O4Vzj0WOWwMAJsTL00xwaNug==
 
+"@headlessui/react@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.3.0.tgz#62287c92604923e5dfb394483e5ec2463e1baea6"
+  integrity sha512-2gqTO6BQ3Jr8vDX1B67n1gl6MGKTt6DBmR+H0qxwj0gTMnR2+Qpktj8alRWxsZBODyOiBb77QSQpE/6gG3MX4Q==
+
+"@heroicons/react@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.1.tgz#66d25f6441920bd5c2146ea27fd33995885452dd"
+  integrity sha512-uikw2gKCmqnvjVxitecWfFLMOKyL9BTFcU4VM3hHj9OMwpkCr5Ke+MRMyY2/aQVmsYs4VTq7NCFX05MYwAHi3g==
+
 "@next/env@11.0.1":
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-11.0.1.tgz#6dc96ac76f1663ab747340e907e8933f190cc8fd"
@@ -146,7 +156,12 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
   integrity sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==
 
-"@types/node@*", "@types/node@^15.12.5":
+"@types/node@*":
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.1.tgz#ef34dea0881028d11398be5bf4e856743e3dc35a"
+  integrity sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==
+
+"@types/node@^15.12.5":
   version "15.12.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.5.tgz#9a78318a45d75c9523d2396131bd3cca54b2d185"
   integrity sha512-se3yX7UHv5Bscf8f1ERKvQOD6sTyycH3hdaoozvaLxgUiY5lIGEeH37AD0G0Qi9kPqihPn0HOfd2yaIEN9VwEg==
@@ -595,15 +610,25 @@ camelcase-css@^2.0.1:
   resolved "https://registry.yarnpkg.com/camelcase-css/-/camelcase-css-2.0.1.tgz#ee978f6947914cc30c6b44741b6ed1df7f043fd5"
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
-caniuse-lite@^1.0.30001202, caniuse-lite@^1.0.30001219, caniuse-lite@^1.0.30001230:
+caniuse-lite@^1.0.30001202:
+  version "1.0.30001221"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001221.tgz#b916721ddf59066cfbe96c5c9a77cf7ae5c52e65"
+  integrity sha512-b9TOZfND3uGSLjMOrLh8XxSQ41x8mX+9MLJYDM4AAHLfaZHttrLNPrScWjVnBITRZbY5sPpCt7X85n7VSLZ+/g==
+
+caniuse-lite@^1.0.30001219:
+  version "1.0.30001223"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001223.tgz#39b49ff0bfb3ee3587000d2f66c47addc6e14443"
+  integrity sha512-k/RYs6zc/fjbxTjaWZemeSmOjO0JJV+KguOBA3NwPup8uzxM1cMhR2BD9XmO86GuqaqTCO8CgkgH9Rz//vdDiA==
+
+caniuse-lite@^1.0.30001228:
   version "1.0.30001240"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001240.tgz#ec15d125b590602c8731545c5351ff054ad2d52f"
   integrity sha512-nb8mDzfMdxBDN7ZKx8chWafAdBp5DAAlpWvNyUGe5tcDWd838zpzDN3Rah9cjCqhfOKkrvx40G2SDtP0qiWX/w==
 
-caniuse-lite@^1.0.30001228:
-  version "1.0.30001242"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001242.tgz#04201627abcd60dc89211f22cbe2347306cda46b"
-  integrity sha512-KvNuZ/duufelMB3w2xtf9gEWCSxJwUgoxOx5b6ScLXC4kPc9xsczUVCPrQU26j5kOsHM4pSUL54tAZt5THQKug==
+caniuse-lite@^1.0.30001230:
+  version "1.0.30001239"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001239.tgz#66e8669985bb2cb84ccb10f68c25ce6dd3e4d2b8"
+  integrity sha512-cyBkXJDMeI4wthy8xJ2FvDU6+0dtcZSJW3voUF8+e9f1bBeuvyZfc3PNbkOETyhbR+dGCPzn9E7MA3iwzusOhQ==
 
 chalk@2.4.2, chalk@^2.0.0:
   version "2.4.2"
@@ -2091,9 +2116,9 @@ node-libs-browser@^2.2.1:
     vm-browserify "^1.0.1"
 
 node-releases@^1.1.71:
-  version "1.1.73"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.73.tgz#dd4e81ddd5277ff846b80b52bb40c49edf7a7b20"
-  integrity sha512-uW7fodD6pyW2FZNZnp/Z3hvWKeEW1Y8R1+1CnErE8cXFXzl5blBOoVB41CvMer6P6Q0S5FXDwcHgFd1Wj0U9zg==
+  version "1.1.71"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
+  integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
