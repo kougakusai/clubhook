@@ -1,5 +1,5 @@
-import { NextPage } from 'next';
-import Layout from 'src/components/shared/Layout';
+import { NextPage } from "next";
+import Layout from "src/components/shared/Layout";
 
 const Index: NextPage = () => {
   return (
