@@ -1,0 +1,5 @@
+{
+  "components": {
+    "Clubhook": "./node_modules/@sls-next/serverless-component"
+  }
+}

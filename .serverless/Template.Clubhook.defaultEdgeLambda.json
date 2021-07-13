@@ -1,0 +1,17 @@
+{
+  "name": "pbf410d-t02zrk",
+  "hash": "h7ezhp0GX9NA5fb4fSNOERs0g3duGSSvrM//VceB9rs=",
+  "description": "Default Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/Users/morimototakurou/workspace/clubhook/.serverless_nextjs/default-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs12.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::200993420218:role/pbf410d-q7lksfza"
+  },
+  "arn": "arn:aws:lambda:us-east-1:200993420218:function:pbf410d-t02zrk",
+  "region": "us-east-1"
+}
