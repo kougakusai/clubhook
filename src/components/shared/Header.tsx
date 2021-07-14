@@ -1,6 +1,6 @@
-import { Fragment } from 'react';
-import type { ReactNode, VFC } from 'react';
-import { Menu, Transition } from '@headlessui/react';
+import { Fragment } from "react";
+import type { ReactNode, VFC } from "react";
+import { Menu, Transition } from "@headlessui/react";
 import {
   BellIcon,
   MenuIcon,
@@ -10,36 +10,36 @@ import {
   CalendarIcon,
   UsersIcon,
   MoonIcon,
-} from '@heroicons/react/outline';
+} from "@heroicons/react/outline";
 
-import { ChevronDownIcon } from '@heroicons/react/solid';
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const navigation = [
-  { title: 'ホーム', href: '#', icon: HomeIcon },
-  { title: 'メンバー', href: '#', icon: UsersIcon },
-  { title: 'カレンダー', href: '#', icon: CalendarIcon },
+  { title: "ホーム", href: "#", icon: HomeIcon },
+  { title: "メンバー", href: "#", icon: UsersIcon },
+  { title: "カレンダー", href: "#", icon: CalendarIcon },
 ];
 const club = [
   {
-    title: 'マイページ',
-    href: '#',
-    src: 'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    title: "マイページ",
+    href: "#",
+    src: "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    title: 'こうがく祭実行委員会',
-    href: '#',
-    src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEylgd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    title: "こうがく祭実行委員会",
+    href: "#",
+    src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEylgd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    title: '日本一つながる学食',
-    href: '#',
-    src: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    title: "日本一つながる学食",
+    href: "#",
+    src: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
 ];
-const profile = ['Your Profile', 'Settings', 'Sign out'];
+const profile = ["Your Profile", "Settings", "Sign out"];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 const Header: VFC = () => {
@@ -64,8 +64,13 @@ const Header: VFC = () => {
                             />
                           </div>
                           <div className="flex items-center px-1 sm:px-2">
-                            <div className="hidden sm:block font-semibold whitespace-nowrap">こうがく祭実行委員会</div>
-                            <ChevronDownIcon className="w-5 h-5" aria-hidden="true" />
+                            <div className="hidden sm:block font-semibold whitespace-nowrap">
+                              こうがく祭実行委員会
+                            </div>
+                            <ChevronDownIcon
+                              className="w-5 h-5"
+                              aria-hidden="true"
+                            />
                           </div>
                         </Menu.Button>
                         <Transition
@@ -89,8 +94,8 @@ const Header: VFC = () => {
                                     return (
                                       <a
                                         className={classNames(
-                                          active ? 'bg-gray-100' : '',
-                                          'block px-4 py-2 text-lg text-night-900'
+                                          active ? "bg-gray-100" : "",
+                                          "block px-4 py-2 text-lg text-night-900"
                                         )}
                                       >
                                         {item}
@@ -174,7 +179,11 @@ const Header: VFC = () => {
                 return (
                   <div key={item.title} className="mb-6">
                     <a href={item.href}>
-                      <img className="w-12 h-12 rounded-full " src={item.src} alt="" />
+                      <img
+                        className="w-12 h-12 rounded-full "
+                        src={item.src}
+                        alt=""
+                      />
                     </a>
                   </div>
                 );
