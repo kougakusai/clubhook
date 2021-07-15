@@ -1,5 +1,9 @@
-import type { VFC, Fragment } from "react";
-import { Disclosure } from "@headlessui/react";
+import React, { useState } from "react";
+import type { VFC } from "react";
+import PageTitle from "./pagetitle";
+
+//1ブロック表示人数
+const defaultShowNum = 20;
 
 type member = {
   id: number;
@@ -150,76 +154,57 @@ const member = [
 ];
 
 const MemberPage: VFC = () => {
+  const [showNum, setShowNum] = useState(defaultShowNum);
+
+  const changeShowNum = () => {
+    if (showNum < member.length) {
+      setShowNum((prevShowNum) => {
+        return prevShowNum + defaultShowNum;
+      });
+    } else {
+      setShowNum(() => {
+        return defaultShowNum;
+      });
+    }
+  };
+
   return (
-    <div className="flex flex-col w-full h-full bg-snow-800">
-      <div className="flex flex-row mx-[32px] mt-[32px] mb-[40px] w-full h-[50px] leading-[50px]">
-        <p className="mr-[16px] w-[256px] text-[18px]">メンバー名</p>
-        <p className="text-[18px]">自己紹介</p>
+    <div className="flex flex-col w-full h-full">
+      <PageTitle title="メンバー" />
+      <div className="flex flex-col w-full h-full bg-snow-800">
+        <div className="flex flex-row mx-[32px] mt-[32px] mb-[40px] w-full h-[50px] leading-[50px]">
+          <p className="mr-[16px] w-[256px] text-[18px]">メンバー名</p>
+          <p className="text-[18px]">自己紹介</p>
+        </div>
+        <div className="justify-center justify-items-center items-center text-center">
+          {member.slice(0, showNum).map((item) => {
+            return (
+              <div
+                key={item.id}
+                className="flex flex-row mx-[32px] mb-[32px] w-full h-[50px] leading-[50px]"
+              >
+                <img
+                  className="mr-[16px] w-[50px] h-[50px] rounded-full"
+                  src={item.icon}
+                />
+                <p className="flex flex-shrink-0 mr-[16px] w-[192px] text-[18px] truncate">
+                  {item.name}
+                </p>
+                <p className="flex mr-[32px] text-[18px] truncate">
+                  {item.intro}
+                </p>
+              </div>
+            );
+          })}
+          <button
+            onClick={changeShowNum}
+            className={`text-brand hover:underline text-[18px] mb-[8px]
+                  ${member.length <= defaultShowNum ? "hidden" : ""}`}
+          >
+            {showNum >= member.length ? "閉じる" : "もっと表示"}
+          </button>
+        </div>
       </div>
-      <Disclosure
-        as="div"
-        className="justify-center justify-items-center items-center text-center"
-      >
-        {({ open }) => {
-          return (
-            <>
-              {member.map((item, index) => {
-                if (index < 20) {
-                  return (
-                    <div
-                      key={item.id}
-                      className="flex flex-row mx-[32px] mb-[32px] w-full h-[50px] leading-[50px]"
-                    >
-                      <img
-                        className="mr-[16px] w-[50px] h-[50px] rounded-full"
-                        src={item.icon}
-                      />
-                      <p className="flex flex-shrink-0 mr-[16px] w-[192px] text-[18px] truncate">
-                        {item.name}
-                      </p>
-                      <p className="flex mr-[32px] text-[18px] truncate">
-                        {item.intro}
-                      </p>
-                    </div>
-                  );
-                }
-              })}
-              <Disclosure.Panel
-                as="div"
-                className={`${member.length <= 20 ? "invisible " : ""}`}
-              >
-                {member.map((item, index) => {
-                  if (index >= 20) {
-                    return (
-                      <div
-                        key={item.id}
-                        className="flex flex-row mx-[32px] mb-[32px] w-full h-[50px] leading-[50px]"
-                      >
-                        <img
-                          className="mr-[16px] w-[50px] h-[50px] rounded-full"
-                          src={item.icon}
-                        />
-                        <p className="flex flex-shrink-0 mr-[16px] w-[192px] text-[18px] truncate">
-                          {item.name}
-                        </p>
-                        <p className="flex mr-[32px] text-[18px] truncate">
-                          {item.intro}
-                        </p>
-                      </div>
-                    );
-                  }
-                })}
-              </Disclosure.Panel>
-              <Disclosure.Button
-                className={`text-brand hover:underline text-[18px] mb-[8px]
-                  ${member.length <= 20 ? "invisible " : ""}`}
-              >
-                {open ? "閉じる" : "もっと表示"}
-              </Disclosure.Button>
-            </>
-          );
-        }}
-      </Disclosure>
     </div>
   );
 };
